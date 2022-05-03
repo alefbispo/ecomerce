@@ -1,3 +1,5 @@
+import 'package:ecomerce/appColors/app_colors.dart';
+import 'package:ecomerce/widgets/my_button_widget.dart';
 import 'package:ecomerce/widgets/my_textfromfiel_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +34,14 @@ class _LoginScreenState extends State<LoginScreen> {
           margin: EdgeInsets.symmetric(horizontal: 20),
           child: Row(
             children: [
-              Expanded(child: child)
+              Expanded(
+                child: MyButtonWidget(
+                  onPress: (){}
+                  ,
+                  color: AppColors.baseBlackColor,
+                  text: 'Sing Up',
+                ),
+              )
             ],
           ),
         ),
