@@ -1,3 +1,4 @@
+import 'package:ecomerce/widgets/my_textfromfiel_widget.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -11,7 +12,30 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget buildTopPart() {
     return Column(
       children: [
-        Image.asset('images/Logo.png'),
+        Image.asset(
+          'images/Logo.png',
+          height: 150,
+        ),
+        Column(
+          children: [
+            MyTextFromField(
+              hintText: 'E-mail',
+              obscureText: false,
+            ),
+            MyTextFromField(
+              hintText: 'Password',
+              obscureText: true,
+            )
+          ],
+        ),
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: 20),
+          child: Row(
+            children: [
+              Expanded(child: child)
+            ],
+          ),
+        ),
       ],
     );
   }
