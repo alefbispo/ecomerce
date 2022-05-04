@@ -36,15 +36,26 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               Expanded(
                 child: MyButtonWidget(
-                  onPress: (){}
-                  ,
+                  onPress: () {},
                   color: AppColors.baseBlackColor,
-                  text: 'Sing Up',
+                  text: 'Sing in',
+                ),
+              ),
+              const SizedBox(width: 20),
+              Expanded(
+                child: MyButtonWidget(
+                  onPress: () {},
+                  color: AppColors.baseDarkPinkColor,
+                  text: 'Sing up',
                 ),
               )
             ],
           ),
         ),
+        const SizedBox(
+          height: 20,
+        )
+        Text('Forgot password?',style: ,)
       ],
     );
   }
