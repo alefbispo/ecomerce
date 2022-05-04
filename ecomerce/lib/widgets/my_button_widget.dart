@@ -17,7 +17,7 @@ class MyButtonWidget extends StatelessWidget {
     return Container(
       width: double.infinity,
       child: MaterialButton(
-        onPressed: onPress(),
+        onPressed: (){},
         child:  Text(
           text,
           style: const TextStyle(
