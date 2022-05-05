@@ -13,4 +13,5 @@ class SvgImages {
   static String trash = 'images/Trash.svg';
   static String twitter = 'images/Twitter.svg';
   static String upload = 'images/Upload.svg';
+  static String logo = 'images/Logo.png';
 }
