@@ -1,4 +1,5 @@
 import 'package:ecomerce/screens/login_screen.dart';
+import 'package:ecomerce/screens/singup_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       
         primarySwatch: Colors.blue,
       ),
-      home: const LoginScreen(),
+      home: const SingupScreen(),
     );
   }
 }
