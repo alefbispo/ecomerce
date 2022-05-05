@@ -1,5 +1,6 @@
 import 'package:ecomerce/appColors/app_colors.dart';
 import 'package:ecomerce/styles/login_screen_styles.dart';
+import 'package:ecomerce/swvImages/swv_images.dart';
 import 'package:ecomerce/widgets/my_button_widget.dart';
 import 'package:ecomerce/widgets/my_textfromfiel_widget.dart';
 import 'package:flutter/material.dart';
@@ -65,9 +66,23 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
+  Widget buildSocialButton({required Widget child, required Function onPress}) {
+    return MaterialButton(
+      shape: OutlineInputBorder(
+        borderSide: const BorderSide(
+          width: 0.5,
+          color: AppColors.baseGrey40Color,
+        ),
+        borderRadius: BorderRadius.circular(5),
+      ),
+      onPressed: onPress(),
+      child: child,
+    );
+  }
+
   Widget buildbottomPart() {
     return Container(
-      height: 350,
+      height: 300,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
@@ -79,25 +94,61 @@ class _LoginScreenState extends State<LoginScreen> {
             height: 5,
           ),
           Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(20),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                MaterialButton(
-                  shape:  OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      width: 0.5,
-                      color: AppColors.baseGrey40Color,
-                    ),
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  onPressed: () {},
+                // facebook social button
+                buildSocialButton(
+                  onPress: () {},
                   child: SvgPicture.asset(
-                    
+                    SvgImages.facebook,
+                    color: AppColors.baseBlackColor,
+                    width: 45,
+                  ),
+                ),
+
+                // google social button
+                buildSocialButton(
+                  onPress: () {},
+                  child: SvgPicture.asset(
+                    SvgImages.google,
+                    color: AppColors.baseBlackColor,
+                    width: 45,
+                  ),
+                ),
+
+                // twitter social button
+                buildSocialButton(
+                  onPress: () {},
+                  child: SvgPicture.asset(
+                    SvgImages.twitter,
+                    color: AppColors.baseBlackColor,
+                    width: 45,
                   ),
                 ),
               ],
             ),
           ),
+          Container(
+            margin: const EdgeInsets.all(20),
+            child: MaterialButton(
+              color: AppColors.baseGrey10Color,
+              height: 55,
+              elevation: 0,
+              shape: OutlineInputBorder(
+                borderSide: BorderSide.none,
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              child: const Center(
+                child: Text(
+                  'Sing up',
+                  style: LoginScreenStyles.singupButtonTextStyles,
+                ),
+              ),
+              onPressed: () {},
+            ),
+          )
         ],
       ),
     );
