@@ -1,4 +1,6 @@
 import 'package:ecomerce/appColors/app_colors.dart';
+import 'package:ecomerce/routes/routes.dart';
+import 'package:ecomerce/screens/login_screen.dart';
 import 'package:ecomerce/styles/singup_screen_style.dart';
 import 'package:ecomerce/swvImages/swv_images.dart';
 import 'package:ecomerce/widgets/my_button_widget.dart';
@@ -39,7 +41,7 @@ class SingupScreen extends StatelessWidget {
         Container(
           margin: edgeInsets,
           child: MyButtonWidget(
-            onPress: () {},
+            onPressed: () {},
             color: AppColors.baseDarkPinkColor,
             text: 'Create an account',
           ),
@@ -85,7 +87,7 @@ class SingupScreen extends StatelessWidget {
     );
   }
 
-  Widget buildBottomPart() {
+  Widget buildBottomPart(BuildContext context) {
     return Container(
       height: 200,
       child: Column(
@@ -138,7 +140,10 @@ class SingupScreen extends StatelessWidget {
           Container(
             margin: const EdgeInsets.all(20),
             child: MaterialButton(
-              onPressed: () {},
+              onPressed: () {
+                PageRouting.goBack(
+                  context: context, navigateTo: LoginScreen(),);
+              },
               color: AppColors.baseGrey10Color,
               height: 55,
               elevation: 0,
@@ -162,7 +167,7 @@ class SingupScreen extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         children: [
           buildTopPart(),
-          buildBottomPart(),
+          buildBottomPart(context),
         ],
       )),
     );

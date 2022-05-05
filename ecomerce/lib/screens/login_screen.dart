@@ -1,4 +1,6 @@
 import 'package:ecomerce/appColors/app_colors.dart';
+import 'package:ecomerce/routes/routes.dart';
+import 'package:ecomerce/screens/singup_screen.dart';
 import 'package:ecomerce/styles/login_screen_styles.dart';
 import 'package:ecomerce/swvImages/swv_images.dart';
 import 'package:ecomerce/widgets/my_button_widget.dart';
@@ -14,7 +16,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  Widget buildTopPart() {
+  Widget buildTopPart(BuildContext context) {
     return Column(
       children: [
         Image.asset(
@@ -39,7 +41,12 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               Expanded(
                 child: MyButtonWidget(
-                  onPress: () {},
+                  onPressed: () {
+                    PageRouting.goToNextPage(
+                      context: context,
+                      navigateTo: const SingupScreen(),
+                    );
+                  },
                   color: AppColors.baseBlackColor,
                   text: 'Sing in',
                 ),
@@ -47,7 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(width: 20),
               Expanded(
                 child: MyButtonWidget(
-                  onPress: () {},
+                  onPressed: () {},
                   color: AppColors.baseDarkPinkColor,
                   text: 'Sing up',
                 ),
@@ -146,7 +153,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   style: LoginScreenStyles.singupButtonTextStyles,
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                PageRouting.goToNextPage(
+                  context: context,
+                  navigateTo: const SingupScreen(),
+                );
+              },
             ),
           )
         ],
@@ -165,7 +177,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  buildTopPart(),
+                  buildTopPart(context),
                   buildbottomPart(),
                 ],
               )

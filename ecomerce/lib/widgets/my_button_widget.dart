@@ -3,14 +3,11 @@ import 'package:flutter/material.dart';
 class MyButtonWidget extends StatelessWidget {
   final String text;
   final Color color;
-  final Function onPress;
+  final Function onPressed;
 
-  const MyButtonWidget(
-      {Key? key,
-      required this.text,
+   MyButtonWidget({required this.text,
       required this.color,
-      required this.onPress})
-      : super(key: key);
+      required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
