@@ -1,12 +1,14 @@
 import 'package:ecomerce/appColors/app_colors.dart';
 import 'package:ecomerce/routes/routes.dart';
+import 'package:ecomerce/screens/homepage/home_page.dart';
 import 'package:ecomerce/screens/singup_screen.dart';
-import 'package:ecomerce/styles/login_screen_styles.dart';
 import 'package:ecomerce/swvImages/swv_images.dart';
 import 'package:ecomerce/widgets/my_button_widget.dart';
 import 'package:ecomerce/widgets/my_textfromfiel_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import '../styles/login_screen_style.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -42,6 +44,10 @@ class _LoginScreenState extends State<LoginScreen> {
               Expanded(
                 child: MyButtonWidget(
                   onPressed: () {
+                    PageRouting.goToNextPage(
+                      context: context,
+                      navigateTo: const HomePage(),
+                    );
                   },
                   color: AppColors.baseBlackColor,
                   text: 'Sing in',
@@ -54,7 +60,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     PageRouting.goToNextPage(
                       context: context,
                       navigateTo: const SingupScreen(),
-                    );},
+                    );
+                  },
                   color: AppColors.baseDarkPinkColor,
                   text: 'Sing up',
                 ),
