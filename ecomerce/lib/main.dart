@@ -1,3 +1,4 @@
+import 'package:ecomerce/appColors/app_colors.dart';
 import 'package:ecomerce/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,9 +13,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-      
+        appBarTheme: const AppBarTheme(
+          iconTheme: IconThemeData(
+            color: AppColors.baseBlackColor,
+          ),
+        ),
         primarySwatch: Colors.blue,
       ),
       home: const LoginScreen(),

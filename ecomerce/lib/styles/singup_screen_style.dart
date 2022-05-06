@@ -5,6 +5,7 @@ class SingupScreenStyles {
   // singInAgressStyle styles
   static const TextStyle singInAgressStyle = TextStyle(
     color: AppColors.baseBlackColor,
+    fontFamily: 'NovaFlat',
     fontSize: 16,
   );
   // termsTextStyle styles
