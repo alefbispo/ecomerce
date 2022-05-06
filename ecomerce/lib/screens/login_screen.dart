@@ -42,10 +42,6 @@ class _LoginScreenState extends State<LoginScreen> {
               Expanded(
                 child: MyButtonWidget(
                   onPressed: () {
-                    PageRouting.goToNextPage(
-                      context: context,
-                      navigateTo: const SingupScreen(),
-                    );
                   },
                   color: AppColors.baseBlackColor,
                   text: 'Sing in',
@@ -54,7 +50,11 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(width: 20),
               Expanded(
                 child: MyButtonWidget(
-                  onPressed: () {},
+                  onPressed: () {
+                    PageRouting.goToNextPage(
+                      context: context,
+                      navigateTo: const SingupScreen(),
+                    );},
                   color: AppColors.baseDarkPinkColor,
                   text: 'Sing up',
                 ),

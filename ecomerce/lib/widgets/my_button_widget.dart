@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class MyButtonWidget extends StatelessWidget {
   final String text;
   final Color color;
-  final Function onPressed;
+  final Function() onPressed;
 
    MyButtonWidget({required this.text,
       required this.color,
@@ -14,7 +14,7 @@ class MyButtonWidget extends StatelessWidget {
     return Container(
       width: double.infinity,
       child: MaterialButton(
-        onPressed: (){},
+        onPressed: onPressed,
         child:  Text(
           text,
           style: const TextStyle(
