@@ -1,6 +1,7 @@
 import 'package:ecomerce/appColors/app_colors.dart';
 import 'package:ecomerce/styles/home_sreen_style.dart';
 import 'package:ecomerce/swvImages/swv_images.dart';
+import 'package:ecomerce/widgets/show_all_widgest.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -69,24 +70,37 @@ class HomePage extends StatelessWidget {
         length: 4,
         child: Scaffold(
           appBar: buildAppBar(),
-          body: const TabBarView(
+          body: TabBarView(
             children: [
-              Center(
-                child: Text('conteundo'),
-                
+              ListView(
+                physics: const BouncingScrollPhysics(),
+                children: [
+                  const ShowAllWidget(
+                    leftText: 'New Arrival',
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 12.0,
+                    ),
+                    child: GridView.builder(
+                      shrinkWrap: true,
+                      primary: true,
+                      itemCount:  2,
+                      physics: const NeverScrollableScrollPhysics(),
+                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        childAspectRatio: 0.7,
+                      ),
+                      itemBuilder: (context, index) {
+                        return Container();
+                      },
+                    ),
+                  ),
+                ],
               ),
-              Center(
-                child: Text('conteundo'),
-                
-              ),
-              Center(
-                child: Text('conteundo'),
-                
-              ),
-              Center(
-                child: Text('conteundo'),
-                
-              ),
+              Center(child: Text('conteundo')),
+              Center(child: Text('conteundo')),
+              Center(child: Text('conteundo')),
             ],
           ),
         ));
