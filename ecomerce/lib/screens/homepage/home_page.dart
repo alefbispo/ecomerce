@@ -1,4 +1,6 @@
 import 'package:ecomerce/appColors/app_colors.dart';
+import 'package:ecomerce/data/home-page-data/home_page_data.dart';
+import 'package:ecomerce/models/single_product_model.dart';
 import 'package:ecomerce/styles/home_sreen_style.dart';
 import 'package:ecomerce/swvImages/swv_images.dart';
 import 'package:ecomerce/widgets/show_all_widgest.dart';
@@ -85,9 +87,9 @@ class HomePage extends StatelessWidget {
                     child: GridView.builder(
                       shrinkWrap: true,
                       primary: true,
-                      itemCount:  2,
-                      physics: const NeverScrollableScrollPhysics(),
-                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      itemCount:  TextProduct.length,
+                      physics:  const NeverScrollableScrollPhysics(),
+                      gridDelegate:  const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
                         childAspectRatio: 0.7,
                       ),
@@ -98,9 +100,9 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-              Center(child: Text('conteundo')),
-              Center(child: Text('conteundo')),
-              Center(child: Text('conteundo')),
+              const Center(child: Text('conteundo')),
+              const Center(child: Text('conteundo')),
+              const Center(child: Text('conteundo')),
             ],
           ),
         ));
