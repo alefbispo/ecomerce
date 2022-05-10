@@ -1,16 +1,6 @@
 import '../../models/single_product_model.dart';
 
-List<SingleProductModel> TextProduct = [
-  SingleProductModel(
-      productName: 'Rick and Morty',
-      productImage: 'https://images.tcdn.com.br/img/img_prod/697730/adesivo_lateral_vidro_caminhao_carro_decorativo_rick_and_morty_1147486360_1_20201210150106.jpg',
-      productModel: 'Cience',
-      productPrice: 999.99,
-      productOldPrice: 500.00,
-      productSecondImage: 'https://images.tcdn.com.br/img/img_prod/697730/adesivo_lateral_vidro_caminhao_carro_decorativo_rick_and_morty_1147486360_1_20201210150106.jpg',
-      productThirdImage: 'https://images.tcdn.com.br/img/img_prod/697730/adesivo_lateral_vidro_caminhao_carro_decorativo_rick_and_morty_1147486360_1_20201210150106.jpg',
-      productFourImage: 'https://images.tcdn.com.br/img/img_prod/697730/adesivo_lateral_vidro_caminhao_carro_decorativo_rick_and_morty_1147486360_1_20201210150106.jpg')
-];
+
 
 List<SingleProductModel> sigleProductData = [
   SingleProductModel(

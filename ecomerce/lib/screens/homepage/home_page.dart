@@ -1,9 +1,9 @@
 import 'package:ecomerce/appColors/app_colors.dart';
 import 'package:ecomerce/data/home-page-data/home_page_data.dart';
-import 'package:ecomerce/models/single_product_model.dart';
 import 'package:ecomerce/styles/home_sreen_style.dart';
 import 'package:ecomerce/swvImages/swv_images.dart';
 import 'package:ecomerce/widgets/show_all_widgest.dart';
+import 'package:ecomerce/widgets/single_product_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -87,14 +87,23 @@ class HomePage extends StatelessWidget {
                     child: GridView.builder(
                       shrinkWrap: true,
                       primary: true,
-                      itemCount:  TextProduct.length,
-                      physics:  const NeverScrollableScrollPhysics(),
-                      gridDelegate:  const SliverGridDelegateWithFixedCrossAxisCount(
+                      itemCount: sigleProductData.length,
+                      physics: const NeverScrollableScrollPhysics(),
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
                         childAspectRatio: 0.7,
                       ),
                       itemBuilder: (context, index) {
-                        return Container();
+                        var data = sigleProductData[index];
+                        return SingleProductWidget(
+                          onPressed: () {},
+                          productImage: data.productImage,
+                          productModel: data.productModel,
+                          productName: data.productName,
+                          productOldPrice: data.productOldPrice,
+                          productPrice: data.productPrice,
+                        );
                       },
                     ),
                   ),
