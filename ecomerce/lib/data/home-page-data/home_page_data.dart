@@ -18,7 +18,7 @@ List<SingleProductModel> sigleProductData = [
           'https://assets.adidas.com/images/w_600,f_auto,q_auto/46f2b6a4a05740aa9e83ac5d00e45b7f_9366/Falcon_Shoes_Pink_FV8278_05_standard.jpg'),
   SingleProductModel(
       productImage:
-          'https://assets.adidas.com/images/w_600,f_auto,q_auto/a143c8a9b9df4d1fb8faaaf600c68fce_9366/Essentials_Linear_Pants_Grey_FM6805_21_model.jpg',
+          'https://assets.adidas.com/images/w_600,f_auto,q_auto/46f2b6a4a05740aa9e83ac5d00e45b7f_9366/Falcon_Shoes_Pink_FV8278_05_standard.jpg',
       productModel: 'Hoodies',
       productName: 'Essentials Linear',
       productOldPrice: 80,
@@ -31,7 +31,7 @@ List<SingleProductModel> sigleProductData = [
           'https://resources.mandmdirect.com/Images/_default/a/d/1/ad17572_2_cloudzoom.jpg'),
   SingleProductModel(
       productImage:
-          'https://assets.adidas.com/images/w_600,f_auto,q_auto/8659b39db18f46b9b913ab8300a8619f_9366/Own_the_Run_Tee_Black_FS9799_21_model.jpg',
+          'https://assets.adidas.com/images/w_600,f_auto,q_auto/46f2b6a4a05740aa9e83ac5d00e45b7f_9366/Falcon_Shoes_Pink_FV8278_05_standard.jpg',
       productModel: 'T-Shirt',
       productName: 'Own The Run Tee',
       productOldPrice: 60,
@@ -70,9 +70,9 @@ List<SingleProductModel> sigleProductData = [
           'https://www.efootwear.eu/media/catalog/product/cache/image/650x650//0/0/0000200860794_03_ek.jpg'),
   SingleProductModel(
       productImage:
-          'https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/954fbe41c9b444859004ab260121a23f_9366/Floral_Track_Jacket_Black_GE0314_21_model.jpg',
+          'https://a-static.mlcdn.com.br/618x463/bota-coturno-feminino-tratorada-blogueira-cano-alto-jgoriginal/jjgoriginal/13677536661/f9ea5bb04e893f9f97dbff21713e7b1b.jpg',
       productModel: 'Jackets',
-      productName: 'Floral Track',
+      productName: 'Boot',
       productOldPrice: 140,
       productPrice: 99,
       productFourImage:
