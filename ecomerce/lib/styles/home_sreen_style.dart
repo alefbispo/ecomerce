@@ -14,4 +14,22 @@ class HomeScreenStyle {
     color: Colors.grey,
     fontSize: 13,
   );
+
+  //trendingProductNameStyle styles
+  static const TextStyle trendingProductNameStyle = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 16,
+  );
+
+  //trendingProductNameStyle styles
+  static const TextStyle trendingProductModelStyle = TextStyle(
+    fontSize: 14,
+    color: AppColors.baseDarkPinkColor,
+  );
+
+  //trendingProductNameStyle styles
+  static const TextStyle trendingProductPriceStyle = TextStyle(
+    fontSize: 18,
+    color: AppColors.baseWhiteColor,
+  );
 }
