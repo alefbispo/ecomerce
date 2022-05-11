@@ -104,6 +104,75 @@ class HomePage extends StatelessWidget {
     );
   }
 
+  Widget buildTrendingProduct({
+    required String productImage,
+    required String productName,
+    required String productModel,
+    required double productPrice,
+  }) {
+    return Container(
+      margin: const EdgeInsets.only(
+        top: 30,
+        left: 30,
+        right: 20,
+        bottom: 20,
+      ),
+      height: 65,
+      child: Row(
+        children: [
+          Expanded(
+            flex: 2,
+            child: Material(
+              shape: RoundedRectangleBorder(
+                side: BorderSide.none,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Image.network(productImage),
+            ),
+          ),
+          Expanded(
+            child: Container(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    productName,
+                    style: HomeScreenStyle.trendingProductNameStyle,
+                  ),
+                  const SizedBox(width: 5),
+                  Text(
+                    productModel,
+                    style: HomeScreenStyle.trendingProductModelStyle,
+                  )
+                ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 30,
+            ),
+            child: MaterialButton(
+              color: AppColors.baseLightPinkColor,
+              elevation: 0,
+              height: 45,
+              shape: RoundedRectangleBorder(
+                side: BorderSide.none,
+                borderRadius: BorderRadius.circular(0.7),
+              ),
+              onPressed: () {},
+              child: Text(
+                "\$ $productPrice",
+                style: HomeScreenStyle.trendingProductPriceStyle,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -145,6 +214,34 @@ class HomePage extends StatelessWidget {
                         );
                       },
                     ),
+                  ),
+                  const Divider(
+                    indent: 15,
+                    endIndent: 16,
+                  ),
+                  const ShowAllWidget(
+                    leftText: 'What\'s trending',
+                  ),
+                  buildTrendingProduct(
+                    productImage:
+                        'https://assets.reebok.com/images/w_600,f_auto,q_auto/cd34290e1b57479399b3aae00137ab00_9366/Classics_Mesh_Tank_Top_White_FJ3179_01_standard.jpg',
+                    productModel: 'Tank-tops',
+                    productName: 'Classics mesh tank top',
+                    productPrice: 15,
+                  ),
+                  buildTrendingProduct(
+                    productImage:
+                        'https://assets.reebok.com/images/w_600,f_auto,q_auto/cd34290e1b57479399b3aae00137ab00_9366/Classics_Mesh_Tank_Top_White_FJ3179_01_standard.jpg',
+                    productModel: 'Tank-tops',
+                    productName: 'Classics mesh tank top',
+                    productPrice: 15,
+                  ),
+                  buildTrendingProduct(
+                    productImage:
+                        'https://assets.reebok.com/images/w_600,f_auto,q_auto/cd34290e1b57479399b3aae00137ab00_9366/Classics_Mesh_Tank_Top_White_FJ3179_01_standard.jpg',
+                    productModel: 'Tank-tops',
+                    productName: 'Classics mesh tank top',
+                    productPrice: 15,
                   ),
                 ],
               ),
