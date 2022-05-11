@@ -1,4 +1,5 @@
 import 'package:ecomerce/appColors/app_colors.dart';
+import 'package:ecomerce/myBottonBar/my_bottom_bar.dart';
 import 'package:ecomerce/routes/routes.dart';
 import 'package:ecomerce/screens/homepage/home_page.dart';
 import 'package:ecomerce/screens/singup_screen.dart';
@@ -46,7 +47,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   onPressed: () {
                     PageRouting.goToNextPage(
                       context: context,
-                      navigateTo: const HomePage(),
+                      navigateTo:  MyBottomBar(),
                     );
                   },
                   color: AppColors.baseBlackColor,

@@ -24,7 +24,7 @@ class SingleProductWidget extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        margin: EdgeInsets.all(10),
+        margin: const EdgeInsets.all(10),
         decoration: BoxDecoration(
           color: Colors.transparent,
           borderRadius: BorderRadius.circular(5),
@@ -46,7 +46,7 @@ class SingleProductWidget extends StatelessWidget {
                   ),
                 ),
                 child: IconButton(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.favorite,
                     size: 30,
                     color: AppColors.baseDarkOrangeColor,
@@ -57,7 +57,7 @@ class SingleProductWidget extends StatelessWidget {
             ),
             Expanded(
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -65,14 +65,14 @@ class SingleProductWidget extends StatelessWidget {
                     Text(
                       productName,
                       overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     Text(
                       productModel,
                       overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: AppColors.baseDarkPinkColor,
                       ),
                     ),
@@ -81,15 +81,15 @@ class SingleProductWidget extends StatelessWidget {
                         Text(
                           '\$ $productPrice',
                           overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(width: 15),
+                        const SizedBox(width: 15),
                         Text(
                           '\$ $productOldPrice',
                           overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
+                          style: const TextStyle(
                             decoration: TextDecoration.lineThrough,
                             fontWeight: FontWeight.bold,
                           ),
