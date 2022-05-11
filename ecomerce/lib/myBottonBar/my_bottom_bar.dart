@@ -1,10 +1,8 @@
+import 'package:ecomerce/appColors/app_colors.dart';
+import 'package:ecomerce/screens/homepage/home_page.dart';
 import 'package:flutter/material.dart';
 
-
-
-
 class MyBottomBar extends StatefulWidget {
-
   @override
   State<MyBottomBar> createState() => _MyBottomBarState();
 }
@@ -14,20 +12,21 @@ class _MyBottomBarState extends State<MyBottomBar> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
+    HomePage(),
     Text(
-      'Index 0: Home',
+      '2 Page',
       style: optionStyle,
     ),
     Text(
-      'Index 1: Business',
+      '3 Page',
       style: optionStyle,
     ),
     Text(
-      'Index 2: School',
+      '4 Page',
       style: optionStyle,
     ),
     Text(
-      'Index 3: Settings',
+      '5 Page',
       style: optionStyle,
     ),
   ];
@@ -41,37 +40,38 @@ class _MyBottomBarState extends State<MyBottomBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('BottomNavigationBar Sample'),
-      ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        type: BottomNavigationBarType.fixed,
+        unselectedItemColor: AppColors.baseGrey40Color,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Home',
-            backgroundColor: Colors.red,
+            label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
-            backgroundColor: Colors.green,
+            icon: Icon(Icons.grid_view),
+            label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
-            backgroundColor: Colors.purple,
+            icon: Icon(Icons.shopping_cart_outlined),
+            label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
-            backgroundColor: Colors.pink,
+            icon: Icon(Icons.favorite_border),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: '',
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: AppColors.baseDarkPinkColor,
         onTap: _onItemTapped,
       ),
     );
