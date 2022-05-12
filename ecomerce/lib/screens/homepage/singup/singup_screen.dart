@@ -1,6 +1,6 @@
 import 'package:ecomerce/appColors/app_colors.dart';
 import 'package:ecomerce/routes/routes.dart';
-import 'package:ecomerce/screens/login_screen.dart';
+import 'package:ecomerce/screens/longinScreen/login_screen.dart';
 import 'package:ecomerce/styles/singup_screen_style.dart';
 import 'package:ecomerce/swvImages/swv_images.dart';
 import 'package:ecomerce/widgets/my_button_widget.dart';

@@ -234,14 +234,42 @@ class HomePage extends StatelessWidget {
                         'https://assets.reebok.com/images/w_600,f_auto,q_auto/cd34290e1b57479399b3aae00137ab00_9366/Classics_Mesh_Tank_Top_White_FJ3179_01_standard.jpg',
                     productModel: 'Tank-tops',
                     productName: 'Classics mesh tank top',
-                    productPrice: 15,
+                    productPrice: 20,
                   ),
                   buildTrendingProduct(
                     productImage:
                         'https://assets.reebok.com/images/w_600,f_auto,q_auto/cd34290e1b57479399b3aae00137ab00_9366/Classics_Mesh_Tank_Top_White_FJ3179_01_standard.jpg',
                     productModel: 'Tank-tops',
                     productName: 'Classics mesh tank top',
-                    productPrice: 15,
+                    productPrice: 35.5,
+                  ),
+                  const ShowAllWidget(
+                    leftText: 'History',
+                  ),
+                  Container(
+                    height: 240,
+                    child: GridView.builder(
+                      scrollDirection: Axis.horizontal,
+                      shrinkWrap: true,
+                      primary: true,
+                      itemCount: sigleProductData.length,
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 1,
+                        childAspectRatio: 1.5,
+                      ),
+                      itemBuilder: (context, index) {
+                        var data = sigleProductData[index];
+                        return SingleProductWidget(
+                          productImage: data.productImage,
+                          productName: data.productName,
+                          productModel: data.productModel,
+                          productPrice: data.productPrice,
+                          productOldPrice: data.productOldPrice,
+                          onPressed: (){},
+                        );
+                      },
+                    ),
                   ),
                 ],
               ),

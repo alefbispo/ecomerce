@@ -1,5 +1,5 @@
 import 'package:ecomerce/appColors/app_colors.dart';
-import 'package:ecomerce/screens/login_screen.dart';
+import 'package:ecomerce/screens/longinScreen/login_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

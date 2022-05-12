@@ -1,15 +1,14 @@
 import 'package:ecomerce/appColors/app_colors.dart';
 import 'package:ecomerce/myBottonBar/my_bottom_bar.dart';
 import 'package:ecomerce/routes/routes.dart';
-import 'package:ecomerce/screens/homepage/home_page.dart';
-import 'package:ecomerce/screens/singup_screen.dart';
+import 'package:ecomerce/screens/homepage/singup/singup_screen.dart';
 import 'package:ecomerce/swvImages/swv_images.dart';
 import 'package:ecomerce/widgets/my_button_widget.dart';
 import 'package:ecomerce/widgets/my_textfromfiel_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../styles/login_screen_style.dart';
+import '../../styles/login_screen_style.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
