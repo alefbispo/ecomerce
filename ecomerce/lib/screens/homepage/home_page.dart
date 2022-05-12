@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:ecomerce/appColors/app_colors.dart';
 import 'package:ecomerce/data/home-page-data/home_page_data.dart';
+import 'package:ecomerce/screens/homepage/singup/tapbar_dada.dart';
 import 'package:ecomerce/styles/home_sreen_style.dart';
 import 'package:ecomerce/swvImages/swv_images.dart';
 import 'package:ecomerce/widgets/show_all_widgest.dart';
@@ -273,7 +274,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-              const Center(child: Text('conteundo')),
+              TabBatBar(),
               const Center(child: Text('conteundo')),
               const Center(child: Text('conteundo')),
             ],
