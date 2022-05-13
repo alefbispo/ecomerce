@@ -1,6 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:ecomerce/appColors/app_colors.dart';
 import 'package:ecomerce/data/home-page-data/home_page_data.dart';
+import 'package:ecomerce/routes/routes.dart';
+import 'package:ecomerce/screens/detailScreen/detail_screen.dart';
 import 'package:ecomerce/screens/homepage/singup/tapbar_dada.dart';
 import 'package:ecomerce/styles/home_sreen_style.dart';
 import 'package:ecomerce/swvImages/swv_images.dart';
@@ -206,7 +208,12 @@ class HomePage extends StatelessWidget {
                       itemBuilder: (context, index) {
                         var data = sigleProductData[index];
                         return SingleProductWidget(
-                          onPressed: () {},
+                          onPressed: () {
+                            PageRouting.goToNextPage(
+                              context: context,
+                              navigateTo: DetailScreen(data: data),
+                            );
+                          },
                           productImage: data.productImage,
                           productModel: data.productModel,
                           productName: data.productName,
